@@ -16,10 +16,6 @@ class Wrapper extends Component {
       .then((res) => this.setState({ cards: res }));
   }
 
-  handleShow;
-
-  componentDidUpdate() {}
-
   render() {
     const { cards } = this.state;
     console.log(cards);

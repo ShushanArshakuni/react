@@ -45,7 +45,7 @@ class Counter extends Component {
     const { isDisabled } = this.props;
     return (
       <>
-        <div>
+        <div className="container">
           <h1>Counter {count}</h1>
 
           <div>

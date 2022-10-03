@@ -8,16 +8,12 @@ class ReportSection extends Component {
     };
   }
 
-  componentWillUnmount() {
-    this.setState({ count: this.state.count + 1 });
-  }
-
   render() {
     const { count } = this.state;
     return (
       <div className="reportSection">
-        <h1>Report</h1>
-        Card number {this.props.id} unmounted {count} times
+        <h2>Report</h2>
+        Card number {this.props.id} unmounted {this.unmountCount} times
         <button>report</button>
       </div>
     );

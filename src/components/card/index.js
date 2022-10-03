@@ -5,12 +5,17 @@ class Card extends Component {
     super(props);
     this.state = {
       hide: false,
+      unmountCount: 0,
     };
   }
 
   hideCard = () => {
     this.setState({ hide: !this.state.hide });
   };
+
+  componentWillUnmount() {
+    this.setState({ unmountCount: this.state.unmountCount + 1 });
+  }
 
   render() {
     const { avatar_URL, id } = this.props;
