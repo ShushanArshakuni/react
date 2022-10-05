@@ -4,41 +4,40 @@ class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: this.props.initial || 0,
+      count: 0,
       max: Infinity,
       min: 0,
       step: 1,
     };
-    this.handleAdd = this.handleAdd.bind(this);
-    this.handleSub = this.handleSub.bind(this);
-    this.handleReset = this.handleReset.bind(this);
-    this.handleMaxValue = this.handleMaxValue.bind(this);
-    this.handleMinValue = this.handleMinValue.bind(this);
   }
 
-  handleAdd() {
+  handleAdd = () => {
     this.setState({ count: this.state.count + this.state.step });
-  }
+  };
 
-  handleSub() {
+  handleSub = () => {
     this.setState({ count: this.state.count - this.state.step });
-  }
+  };
 
-  handleReset() {
+  handleReset = () => {
     this.setState({ count: 0 });
-  }
+  };
 
-  handleMaxValue(event) {
+  handleMaxValue = (event) => {
     this.setState({
       max: event.target.value,
     });
-  }
+  };
 
-  handleMinValue(event) {
+  handleMinValue = (event) => {
     this.setState({
       min: event.target.value,
     });
-  }
+  };
+
+  handleStep = (event) => {
+    this.setState({ step: Number(event.target.value) });
+  };
 
   render() {
     const { count, max, min } = this.state;
@@ -46,9 +45,8 @@ class Counter extends Component {
     return (
       <>
         <div className="container">
-          <h1>Counter {count}</h1>
-
-          <div>
+          <button className="button">Counter {count}</button>
+          <div className="min-max">
             <label>
               Max
               <input
@@ -86,6 +84,11 @@ class Counter extends Component {
           >
             -
           </button>
+
+          <label className="button">
+            step
+            <input type="number" onChange={this.handleStep}></input>
+          </label>
         </div>
       </>
     );

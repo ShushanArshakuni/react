@@ -15,7 +15,7 @@ class App extends Component {
 
     return (
       <>
-        <Counter isDisabled={isDisabled} initial={0} />
+        <Counter isDisabled={isDisabled} />
       </>
     );
   }

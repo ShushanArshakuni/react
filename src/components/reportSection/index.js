@@ -9,12 +9,13 @@ class ReportSection extends Component {
   }
 
   render() {
+    console.log("this.props.reports");
+    console.log(this.props.reports);
     const { count } = this.state;
     return (
-      <div className="reportSection">
+      <div className="report-section">
         <h2>Report</h2>
         Card number {this.props.id} unmounted {this.unmountCount} times
-        <button>report</button>
       </div>
     );
   }

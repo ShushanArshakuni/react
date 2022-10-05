@@ -1,26 +1,26 @@
 [
   {
-    "avatar_URL": "photocards/sketch1.jpg",
+    "avatarUrl": "photocards/sketch1.jpg",
     "id": "1"
   },
   {
-    "avatar_URL": "photocards/sketch2.jpg",
+    "avatarUrl": "photocards/sketch2.jpg",
     "id": "2"
   },
   {
-    "avatar_URL": "photocards/sketch3.jpg",
+    "avatarUrl": "photocards/sketch3.jpg",
     "id": "3"
   },
   {
-    "avatar_URL": "photocards/sketch4.jpg",
+    "avatarUrl": "photocards/sketch4.jpg",
     "id": "4"
   },
   {
-    "avatar_URL": "photocards/sketch5.jpg",
+    "avatarUrl": "photocards/sketch5.jpg",
     "id": "5"
   },
   {
-    "avatar_URL": "photocards/sketch6.jpg",
+    "avatarUrl": "photocards/sketch6.jpg",
     "id": "6"
   }
 ]

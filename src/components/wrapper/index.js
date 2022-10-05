@@ -7,6 +7,7 @@ class Wrapper extends Component {
     super();
     this.state = {
       cards: [],
+      reports: [],
     };
   }
 
@@ -16,22 +17,28 @@ class Wrapper extends Component {
       .then((res) => this.setState({ cards: res }));
   }
 
+  getReport = () => {
+    this.setState({ cards: [{ name: "gago" }] });
+  };
+
   render() {
     const { cards } = this.state;
-    console.log(cards);
     return (
-      <div className="container">
+      <>
         <div className="cards-section">
           <div className="cards-container">
             {cards.map((card, i) => (
-              <Card key={i} avatar_URL={card.avatar_URL} id={card.id} />
+              <Card key={i} avatarUrl={card.avatarUrl} id={card.id} />
             ))}
           </div>
         </div>
-        <div className="report-section">
-          <ReportSection />
+        <button onClick={this.getReport} className="report-button">
+          get report
+        </button>
+        <div>
+          <ReportSection data={this.state.reports} />
         </div>
-      </div>
+      </>
     );
   }
 }

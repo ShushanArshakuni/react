@@ -13,18 +13,14 @@ class Card extends Component {
     this.setState({ hide: !this.state.hide });
   };
 
-  componentWillUnmount() {
-    this.setState({ unmountCount: this.state.unmountCount + 1 });
-  }
-
   render() {
-    const { avatar_URL, id } = this.props;
+    const { avatarUrl, id } = this.props;
     return (
       <div className="card">
         {!this.state.hide && (
           <>
             <h2 className="number"> {id}</h2>
-            <img className="image" src={avatar_URL} alt="" />
+            <img className="image" src={avatarUrl} alt="" />
           </>
         )}
         <button
